@@ -1,0 +1,147 @@
+/* GHUKASI — complete NOCTURNE treatment for the biography and full discography */
+.sub-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 79% 55%,#393054 0%,#171225 31%,#08080d 73%);border-bottom:1px solid #3c334d;min-height:530px;padding:95px 0 85px}
+.sub-hero:after{content:"";position:absolute;right:-4%;top:6%;width:min(55vw,670px);aspect-ratio:1;border-radius:50%;border:1px solid #bda6ff45;box-shadow:0 0 0 50px #8676e612,0 0 0 130px #9072f409;z-index:-1}
+.sub-hero .split{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:5vw}
+.sub-hero h1{font:900 clamp(57px,8vw,134px)/.93 'Archivo Black',sans-serif;letter-spacing:-.075em;margin:22px 0}
+.sub-hero h1 em{color:var(--acid);font-style:normal}
+.sub-hero .desc{font-size:clamp(15px,1.55vw,21px);max-width:640px;color:#b9b8c7;line-height:1.75}
+.sub-hero .action-row{display:flex;gap:11px;flex-wrap:wrap;margin-top:32px}
+.sub-hero .hero-artwork{width:min(100%,490px);aspect-ratio:1;justify-self:center;position:relative;display:grid;place-items:center}
+.sub-hero .hero-artwork img{width:78%;height:78%;object-fit:cover;border-radius:12px;transform:rotate(-8deg);box-shadow:0 29px 75px #000a,0 0 75px #8d64ff3b;z-index:2}
+.sub-hero .hero-artwork:before{content:"";position:absolute;inset:8%;border:30px solid #bdaaff1e;box-shadow:0 0 0 43px #897dff14;border-radius:50%;animation:ring-breathe 12s ease-in-out infinite alternate}
+.sub-hero .hero-artwork:after{content:"GHUKASI";position:absolute;bottom:0;right:0;font:900 35px/1 'Archivo Black';letter-spacing:-.06em;background:var(--acid);color:#141415;padding:14px;z-index:2;transform:rotate(5deg)}
+.sub-hero .hero-artwork.album:after{content:"105 TRACKS"}
+.sub-meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:29px;color:#a4a3b0;font-weight:800;font-size:11px;letter-spacing:1px}
+.sub-meta i{width:6px;height:6px;background:var(--acid);border-radius:50%}
+.sub-section{padding:100px 0;background:#0a0a0d}
+.sub-section.paper{background:var(--paper);color:#17171c}
+.sub-section h2{font:900 clamp(52px,6vw,100px)/.95 'Archivo Black';letter-spacing:-.075em;margin:19px 0 24px}
+.sub-section h2 em{font-style:normal;color:var(--acid)}
+.sub-section.paper h2 em{color:#735ad4}
+.sub-section .description{color:#aaaab8;font-size:16px;line-height:1.8;max-width:790px}
+.sub-section.paper .description{color:#666671}
+.bio-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:7vw;align-items:start}
+.bio-grid article h3{font-size:clamp(24px,3vw,41px);line-height:1.2;font-family:'Space Grotesk',sans-serif;margin:0 0 20px}
+.bio-grid article p{color:#bcbac7;font-size:16px;line-height:1.9;margin:0 0 18px}
+.bio-grid article p a{color:var(--acid)}
+.bio-identity-card{background:linear-gradient(135deg,#272039,#110f1a);border:1px solid #41374f;min-height:465px;border-radius:11px;padding:40px;position:relative;overflow:hidden}
+.bio-identity-card:before{content:"G";font:900 390px/1 'Archivo Black';position:absolute;right:-20%;bottom:-33%;color:#b2a0ef17;pointer-events:none}
+.bio-identity-card .card-tag{color:var(--acid);font-size:11px;font-weight:800;letter-spacing:1.5px}
+.bio-identity-card .name{font:900 clamp(42px,5vw,75px)/1 'Archivo Black';letter-spacing:-.06em;margin:50px 0 24px}
+.bio-identity-card p{font-size:15px;color:#b4b1c4;line-height:1.7}
+.bio-identity-card .cta{display:inline-block;margin-top:32px;border-bottom:1px solid var(--acid);color:var(--acid);font-size:12px;font-weight:800;padding-bottom:8px}
+.facts-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#383840;border:1px solid #383840;border-radius:10px;overflow:hidden;margin-top:70px}
+.facts-strip>div{padding:30px;background:#18181f;min-width:0}
+.facts-strip span{display:block;font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8f90a1;margin-bottom:11px}
+.facts-strip strong{font-size:19px;font-weight:800;overflow-wrap:anywhere}
+.official-visuals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:35px}
+.official-visual{position:relative;display:flex;flex-direction:column;gap:0;border-radius:10px;border:1px solid #3a3a45;overflow:hidden;background:#17171d;transition:transform .25s,border-color .25s}
+.official-visual:hover{transform:translateY(-5px);border-color:#9b9ba9}
+.official-visual img{width:100%;aspect-ratio:1.1;object-fit:cover;background:#0f0e14}
+.official-visual .card-info{padding:18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:800}
+.official-visual small{font-size:11px;color:#aaa7b8;font-weight:500}
+.official-visuals-note{font-size:12px;color:#8e8c99;margin-top:20px}
+.bands{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:35px}
+.bands a{padding:14px 18px;border:1px solid #4a465a;border-radius:6px;background:#16161c;font-size:12px;font-weight:800;transition:color .2s,border .2s}
+.bands a:hover{color:var(--acid);border-color:var(--acid)}
+.breadcrumb{color:#aaa8b5;font-size:12px;letter-spacing:.5px;margin-bottom:22px}
+.breadcrumb a{color:var(--acid)}
+/* Full discography: same palette and exact structural density as the homepage */
+.discography-page{background:var(--paper);color:#151519;padding:100px 0}
+.discography-page .section-tag{color:#5a5a64}
+.discography-page .section-tag:before{background:#5a5a64}
+.discography-page .page-title{font:900 clamp(52px,6.5vw,110px)/.94 'Archivo Black';letter-spacing:-.073em;margin:17px 0 25px}
+.discography-page .page-title em{font-style:normal;color:#7461d1}
+.discography-page .page-desc{max-width:780px;color:#5f606c;line-height:1.7}
+.discography-page .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px;background:#fff;border:1px solid #dadade;border-radius:8px;margin:31px 0 23px}
+.discography-page .controls input,.discography-page .controls select{border:1px solid #dededf;background:#f7f7f7;color:#15151a;min-height:47px;padding:10px 14px;border-radius:5px;font-size:13px}
+.discography-page .controls input{flex:1 1 220px;min-width:190px}
+.discography-page .filter{display:flex;gap:6px;flex-wrap:wrap}
+.discography-page .filter button{min-height:45px;background:#f5f5f6;border:1px solid #dedee2;color:#494953;font-size:11px;font-weight:800;padding:10px 13px;border-radius:5px}
+.discography-page .filter button.active{background:#141419;color:white;border-color:#141419}
+.discography-page .count{font-size:11px;font-weight:800;letter-spacing:1.1px;color:#777780;margin:15px 0 22px}
+.discography-page .songs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px 13px}
+.discography-page .song{display:block;min-width:0;background:white;border:1px solid #d8d8db;border-radius:9px;padding:9px 9px 15px;color:#141419;transition:transform .23s,box-shadow .23s}
+.discography-page .song:hover{transform:translateY(-5px);box-shadow:0 12px 25px #0002}
+.discography-page .song[hidden]{display:none!important}
+.discography-page .song .cover{display:block;position:relative;aspect-ratio:1;overflow:hidden;border-radius:5px}
+.discography-page .song img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .25s}
+.discography-page .song:hover img{transform:scale(1.06)}
+.discography-page .song strong{font-size:13px;display:block;margin:11px 3px 4px;line-height:1.3;overflow-wrap:anywhere}
+.discography-page .song small{font-size:11px;color:#7a7b85;margin:0 3px}
+.discography-page .arrow{display:grid;place-items:center;position:absolute;right:8px;bottom:8px;background:var(--acid);border-radius:50%;color:#111217;width:30px;height:30px}
+.discography-page .more-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:38px}
+.discography-page .more-button{background:#141419;color:white;min-height:53px;padding:14px 29px;border:0;border-radius:5px;font-size:12px;font-weight:800;letter-spacing:.5px;cursor:pointer;transition:transform .2s}
+.discography-page .more-button:hover{transform:translateY(-2px);background:#313139}
+.discography-page .more-button[hidden]{display:none!important}
+.discography-page .more-count{font-size:12px;color:#74747e}
+.discography-page .notes{border-top:1px solid #d3d3d7;padding-top:25px;margin-top:50px;font-size:12px;line-height:1.8;color:#757581}
+.discography-page .notes a{color:#1a1a22;text-decoration:underline}
+.page-footer{padding:80px 0 40px;background:#07070a;border-top:1px solid #2c2b34}
+.page-footer .footline{display:flex;justify-content:space-between;align-items:center;gap:17px;flex-wrap:wrap;font-size:12px;color:#a5a5b2}
+.page-footer .footline a{color:var(--acid);font-weight:800}
+.page-footer .huge{font:900 clamp(70px,18vw,280px)/.84 'Archivo Black',sans-serif;letter-spacing:-.1em;color:#f6f6f3;text-align:center;margin:65px 0 42px}
+.page-footer .huge span{color:var(--acid)}
+@media(max-width:1100px){
+.sub-hero .split{grid-template-columns:1.1fr .9fr;gap:2vw}
+.sub-hero .hero-artwork{width:100%}
+.official-visuals{gap:10px}
+.discography-page .songs{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media(max-width:780px){
+.sub-hero{padding:65px 0 75px}
+.sub-hero .split{grid-template-columns:1fr}
+.sub-hero .hero-artwork{grid-row:1;width:min(80%,380px)}
+.sub-hero .copy{grid-row:2}
+.sub-hero h1{font-size:clamp(61px,10vw,93px)}
+.bio-grid{grid-template-columns:1fr;gap:24px}
+.bio-identity-card{min-height:310px}
+.facts-strip{grid-template-columns:1fr 1fr}
+.official-visuals{grid-template-columns:repeat(2,minmax(0,1fr))}
+.official-visuals .official-visual:last-child{grid-column:span 2}
+.official-visuals .official-visual:last-child img{max-height:210px}
+.discography-page .songs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:480px){
+.sub-hero h1{font-size:15.2vw}
+.sub-hero .hero-artwork{width:100%;max-width:310px}
+.sub-hero .hero-artwork:after{font-size:22px}
+.sub-hero .desc{font-size:14px}
+.sub-section{padding:75px 0}
+.sub-section h2{font-size:12vw}
+.bio-identity-card{padding:25px}
+.bio-identity-card .name{font-size:12vw}
+.facts-strip{grid-template-columns:1fr}
+.facts-strip>div{padding:20px}
+.official-visuals{gap:9px}
+.official-visual .card-info{padding:12px;font-size:11px}
+.official-visual small{font-size:10px}
+.discography-page{padding:65px 0}
+.discography-page .page-title{font-size:12vw}
+.discography-page .controls{padding:11px}
+.discography-page .controls input{flex:1 0 100%}
+.discography-page .songs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.discography-page .song strong{font-size:12px}
+.discography-page .song small{font-size:10px}
+.discography-page .more-button{width:100%;max-width:320px}
+.page-footer .huge{font-size:19vw}
+}
+/* Universal accessible 4-language flag dropdown */
+.lang-control{position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lang-current{display:flex;align-items:center;justify-content:center;gap:8px;min-width:75px;min-height:41px;padding:7px 10px;border:1px solid #595961;background:#19191f;border-radius:6px;color:#fff;cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.2px;transition:border .2s,background .2s}
+.lang-current:hover{border-color:var(--acid);background:#28282e}
+.lang-current .flag{font-size:21px}
+.lang-current .chevron{font-size:10px;color:#aeaeba}
+.lang-options{position:absolute;top:calc(100% + 10px);right:0;min-width:200px;border:1px solid #454550;background:#16161c;padding:7px;border-radius:9px;box-shadow:0 18px 55px #000b;z-index:90;display:flex;flex-direction:column;gap:2px}
+.lang-options[hidden]{display:none}
+.lang-options button{display:flex;align-items:center;gap:12px;width:100%;border:0;border-radius:5px;padding:10px 12px;background:transparent;color:#fff;text-align:left;font-size:12px;font-weight:700;cursor:pointer}
+.lang-options button .flag{font-size:22px}
+.lang-options button:hover,.lang-options button[aria-selected=true]{background:#32323b;color:var(--acid)}
+.lang-options .language-label{font-size:12px}
+.lang-options button[aria-selected=true] .language-label:after{content:" ✓";font-weight:900}
+@media(max-width:450px){.header{gap:8px;padding:0 3%}.logo{font-size:21px}.header-right{gap:6px}.header-cta{font-size:10px!important;padding:10px 8px!important}.lang-current{min-width:59px;padding:6px}.lang-current .flag{font-size:18px}.lang-options{right:-16px;min-width:185px}.mobile-menu summary{font-size:10px!important;padding:12px 3px}}
+/* Hebrew: keep artwork layout left-to-right, natural right-to-left text flow */
+html[dir=rtl] .header,html[dir=rtl] .hero-body,html[dir=rtl] .release-layout,html[dir=rtl] .about-layout,html[dir=rtl] .watch-card,html[dir=rtl] .sub-hero .split,html[dir=rtl] .bio-grid,html[dir=rtl] .catalog .trackgrid,html[dir=rtl] .discography-page .songs,html[dir=rtl] .release-small{direction:ltr}
+html[dir=rtl] .hero-copy,html[dir=rtl] .about-copy,html[dir=rtl] .watch-copy,html[dir=rtl] .sub-hero .copy,html[dir=rtl] .bio-grid article,html[dir=rtl] .platform-top,html[dir=rtl] .catalog-head,html[dir=rtl] .releases-head,html[dir=rtl] .sub-section .description,html[dir=rtl] .discography-page .page-title,html[dir=rtl] .discography-page .page-desc{direction:rtl;text-align:right}
+html[dir=rtl] .hero-copy .identity{direction:ltr;text-align:right}
+html[dir=rtl] .lang-options{direction:ltr}
