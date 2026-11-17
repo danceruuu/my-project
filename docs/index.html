@@ -222,6 +222,7 @@
 <a class="track" data-title="habibi" data-kind="single" data-year="2025" href="https://music.apple.com/us/album/habibi/1853178845?i=1853178846&amp;uo=4" target="_blank" rel="noopener noreferrer"><div class="trackimg"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a1/fe/2f/a1fe2f17-e877-33e0-5fe9-4764efe531c0/artwork.jpg/600x600bb.jpg" loading="lazy" width="280" height="280" alt="GHUKASI — HABIBI official music release artwork"><span>↗</span></div><strong>HABIBI</strong><small>Single / 2025</small></a>
 <a class="track" data-title="underground" data-kind="single" data-year="2025" href="https://music.apple.com/us/album/underground/1853355922?i=1853355923&amp;uo=4" target="_blank" rel="noopener noreferrer"><div class="trackimg"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/a7/42/84a742ea-528a-b271-eaf1-bba8e20ff19b/artwork.jpg/600x600bb.jpg" loading="lazy" width="280" height="280" alt="GHUKASI — UNDERGROUND official music release artwork"><span>↗</span></div><strong>UNDERGROUND</strong><small>Single / 2025</small></a>
 <a class="track" data-title="dream" data-kind="single" data-year="2025" href="https://music.apple.com/us/album/dream/1853325261?i=1853325265&amp;uo=4" target="_blank" rel="noopener noreferrer"><div class="trackimg"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e4/08/a6/e408a68c-8a94-2812-1dab-bbf9f2b5d9fc/artwork.jpg/600x600bb.jpg" loading="lazy" width="280" height="280" alt="GHUKASI — DREAM official music release artwork"><span>↗</span></div><strong>DREAM</strong><small>Single / 2025</small></a></div>
+<div class="catalog-more-wrap"><button type="button" id="load-more-tracks" class="catalog-more" aria-controls="trackgrid">ПОКАЗАТЬ ЕЩЁ 12 <span aria-hidden="true">↓</span></button><p id="catalog-showing" class="catalog-showing" aria-live="polite">Показано 12 из 105 треков</p></div>
 <div class="bottom-action"><span>CATALOG SOURCE: APPLE MUSIC</span><a href="https://music.apple.com/us/artist/ghukasi/1852157042" target="_blank" rel="noopener noreferrer">GHUKASI ON APPLE MUSIC ↗</a></div></section>
 <section class="section bio" id="bio"><div class="section-label"><span>03 / THE ARTIST</span><span>GHUKASI / DENIS GHUKASYAN</span></div><div class="bio-cols">
 <div class="artist-art"><img loading="lazy" src="https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages221/v4/0f/7b/18/0f7b180c-9f27-109a-a3fd-aca00919376b/ami-identity-3638d55d2e400cbe93e1321c8c699f6a-2025-12-02T06-07-00.214Z_cropped.png/1000x1000bb.png" alt="GHUKASI artist emblem on official music profiles"><small>OFFICIAL ARTIST VISUAL IDENTITY</small></div>
@@ -236,28 +237,43 @@
 <a class="platform" href="https://www.facebook.com/denis.ghukasyan/" target="_blank" rel="noopener noreferrer" style="--brand:#3b81ff" aria-label="GHUKASI on Facebook"><span class="platform-symbol"><svg fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span><span>Facebook</span><span class="platform-arr">↗</span></a></div><h2>GHUKASI</h2><div class="footer-bottom"><span>© 2026 GHUKASI · DENIS GHUKASYAN · ДЕНИС ГУКАСЯН</span><span>INDEPENDENT ELECTRONIC MUSIC ARTIST</span><a href="#top">BACK TO TOP ↑</a></div></footer>
 <script>
 (function(){
-const cards=Array.from(document.querySelectorAll('.track'));
-const input=document.getElementById('search');
-const year=document.getElementById('year');
-const buttons=Array.from(document.querySelectorAll('.filters button'));
-const results=document.getElementById('results');
-let kind='all';
-function filter(){
-  const term=input.value.toLocaleLowerCase().trim();
-  const yr=year.value;
-  let shown=0;
-  cards.forEach((card)=>{
-    const ok=(kind==='all'||card.dataset.kind===kind)&&(yr==='all'||card.dataset.year===yr)&&(!term||card.dataset.title.includes(term));
-    card.hidden=!ok;
-    if(ok)shown++;
-  });
-  results.textContent=shown+' TRACKS FOUND';
-}
-input.addEventListener('input',filter);
-year.addEventListener('change',filter);
-buttons.forEach((b)=>b.addEventListener('click',()=>{
-kind=b.dataset.type;buttons.forEach((x)=>{const active=x===b;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active))});filter();
-}));
+  const cards=Array.from(document.querySelectorAll('.track'));
+  const input=document.getElementById('search');
+  const year=document.getElementById('year');
+  const buttons=Array.from(document.querySelectorAll('.filters button'));
+  const results=document.getElementById('results');
+  const more=document.getElementById('load-more-tracks');
+  const showing=document.getElementById('catalog-showing');
+  const batchSize=12;
+  let kind='all';
+  let visibleLimit=batchSize;
+  let matches=[];
+  function render(){
+    const shown=Math.min(visibleLimit,matches.length);
+    const available=new Set(matches.slice(0,shown));
+    cards.forEach(card=>{card.hidden=!available.has(card);});
+    results.textContent=matches.length+' TRACKS FOUND';
+    showing.textContent=matches.length?'Показано '+shown+' из '+matches.length+' треков':'Нет подходящих треков';
+    const remaining=matches.length-shown;
+    more.hidden=remaining<=0;
+    if(remaining>0)more.innerHTML='ПОКАЗАТЬ ЕЩЁ '+Math.min(batchSize,remaining)+' <span aria-hidden="true">↓</span>';
+  }
+  function filter(){
+    const term=input.value.toLocaleLowerCase().trim();
+    const yr=year.value;
+    matches=cards.filter(card=>(kind==='all'||card.dataset.kind===kind)&&(yr==='all'||card.dataset.year===yr)&&(!term||card.dataset.title.includes(term)));
+    visibleLimit=batchSize;
+    render();
+  }
+  more.addEventListener('click',()=>{visibleLimit+=batchSize;render();});
+  input.addEventListener('input',filter);
+  year.addEventListener('change',filter);
+  buttons.forEach(b=>b.addEventListener('click',()=>{
+    kind=b.dataset.type;
+    buttons.forEach(x=>{const active=x===b;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active));});
+    filter();
+  }));
+  filter();
 })();
 </script>
 </body></html>
