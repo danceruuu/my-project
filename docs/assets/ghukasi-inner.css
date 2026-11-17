@@ -149,3 +149,8 @@ html[dir=rtl] .lang-options{direction:ltr}
 /* Armenian long-word safety in narrow biography layouts */
 html[lang=hy] .sub-section h2,html[lang=hy] .bio-identity-card .name,html[lang=hy] .sub-hero h1{overflow-wrap:anywhere;word-break:break-word}
 @media(max-width:480px){html[lang=hy] .sub-section h2{font-size:clamp(31px,8vw,43px)}}
+
+/* Album hero language-specific artwork label */
+html[lang=ru] .sub-hero .hero-artwork.album:after{content:"105 ТРЕКОВ"}
+html[lang=he] .sub-hero .hero-artwork.album:after{content:"105 רצועות"}
+html[lang=hy] .sub-hero .hero-artwork.album:after{content:"105 ԵՐԳ"}
