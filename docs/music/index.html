@@ -133,6 +133,7 @@ function render(){
  const remain=matches.length-visible;
  more.hidden=remain<=0;
  if(remain>0)more.innerHTML='ПОКАЗАТЬ ЕЩЁ '+Math.min(step,remain)+' <span aria-hidden="true">↓</span>';
+ window.GHUKASI_I18N?.updateDynamic?.();
 }
 function filter(){
  const q=input.value.trim().toLowerCase(),y=select.value;
