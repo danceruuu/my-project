@@ -333,3 +333,14 @@ html{scroll-behavior:auto}
 *,*:before,*:after{animation:none!important;transition:none!important}
 .js-motion .reveal{opacity:1!important;transform:none!important}
 }
+
+/* Equal-release showcase — albums and singles share the same visual treatment */
+.release-layout.release-equal-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:stretch}
+.release-layout.release-equal-grid>.release-tile{min-height:330px;width:100%;border-radius:10px}
+.release-layout.release-equal-grid>.release-tile img{width:100%;height:100%;object-fit:cover}
+.release-layout.release-equal-grid .tile-body{padding:17px}
+.release-layout.release-equal-grid .tile-body strong{font-size:clamp(14px,1.5vw,20px)}
+.release-layout.release-equal-grid .tile-body small{font-size:11px}
+@media(max-width:1200px){.release-layout.release-equal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.release-layout.release-equal-grid>.release-tile{min-height:330px}}
+@media(max-width:650px){.release-layout.release-equal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.release-layout.release-equal-grid>.release-tile{min-height:225px}.release-layout.release-equal-grid .tile-body{padding:12px}.release-layout.release-equal-grid .tile-body strong{font-size:14px}}
+@media(max-width:380px){.release-layout.release-equal-grid>.release-tile{min-height:180px}}
