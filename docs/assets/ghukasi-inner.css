@@ -145,3 +145,7 @@ html[dir=rtl] .header,html[dir=rtl] .hero-body,html[dir=rtl] .release-layout,htm
 html[dir=rtl] .hero-copy,html[dir=rtl] .about-copy,html[dir=rtl] .watch-copy,html[dir=rtl] .sub-hero .copy,html[dir=rtl] .bio-grid article,html[dir=rtl] .platform-top,html[dir=rtl] .catalog-head,html[dir=rtl] .releases-head,html[dir=rtl] .sub-section .description,html[dir=rtl] .discography-page .page-title,html[dir=rtl] .discography-page .page-desc{direction:rtl;text-align:right}
 html[dir=rtl] .hero-copy .identity{direction:ltr;text-align:right}
 html[dir=rtl] .lang-options{direction:ltr}
+
+/* Armenian long-word safety in narrow biography layouts */
+html[lang=hy] .sub-section h2,html[lang=hy] .bio-identity-card .name,html[lang=hy] .sub-hero h1{overflow-wrap:anywhere;word-break:break-word}
+@media(max-width:480px){html[lang=hy] .sub-section h2{font-size:clamp(31px,8vw,43px)}}
