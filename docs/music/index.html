@@ -10,7 +10,46 @@
 .more-button[hidden],.songs .song[hidden]{display:none!important}
 .more-count{font-size:12px;color:#b6b5d0;margin:0}
 @media(max-width:620px){.more-button{width:100%;max-width:320px}}
-</style></head><body><header><a class="brand" href="https://danceruuu.github.io/my-project/">GHUK<span>A</span>SI</a><nav><a href="https://danceruuu.github.io/my-project/">HOME</a><a href="https://danceruuu.github.io/my-project/artist/">BIOGRAPHY</a></nav><a href="https://open.spotify.com/artist/4vx3ca1O8XIwfsjQe1ZlTK" class="listen">LISTEN ON SPOTIFY ↗</a></header><main><section class="hero"><div class="eyebrow">GHUKASI / DENIS GHUKASYAN / ДЕНИС ГУКАСЯН</div><h1>THE<br>MUSIC<span>.</span></h1><p>Every GHUKASI release in one place. Discover the independent electronic artist's singles, atmospheric house productions, and the complete DREAMS album. Open any track on Apple Music.</p><div class="stats"><div class="stat"><strong>105</strong><span>TRACKS</span></div><div class="stat"><strong>94</strong><span>SINGLES</span></div><div class="stat"><strong>11</strong><span>DREAMS ALBUM TRACKS</span></div></div></section><section class="content"><div class="titleline"><h2>ALL RELEASES<span style="color:#fd3386">.</span></h2><p>Verified artist discography. Search by song title and filter singles or tracks from the DREAMS album.</p></div><div class="controls"><label class="sr" for="q">Search tracks</label><input id="q" type="search" placeholder="Search songs / Поиск песен"><div class="filter"><button type="button" class="active" data-kind="all" aria-pressed="true">All tracks</button><button type="button" data-kind="single" aria-pressed="false">Singles</button><button type="button" data-kind="album" aria-pressed="false">DREAMS album</button></div><label class="sr" for="year">Year</label><select id="year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option></select></div><p class="count" role="status" id="count">105 RELEASED TRACKS</p><div class="songs" id="all-tracks"><a class="song" data-title="call my name" data-year="2026" data-kind="single" href="https://music.apple.com/us/album/call-my-name/6835188343?i=6835188344&amp;uo=4" target="_blank" rel="noopener noreferrer"><span class="cover"><img loading="lazy" decoding="async" alt="Call My Name — GHUKASI" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/de/38/0cde3813-8eae-f1c3-27d8-44bf60e1bb39/artwork.jpg/600x600bb.jpg" width="250" height="250" /><span class="arrow">↗</span></span><strong>Call My Name</strong><small>Single · 2026</small></a>
+
+/* GHUKASI / NOCTURNE SYSTEM — consistent with official homepage */
+:root{--bg:#08080b;--pink:#d8ff54;--blue:#d8ff54;--white:#f5f4f1;--muted:#9a9aa7}
+body{background:#09090d;color:var(--white)}
+header{position:sticky;top:0;z-index:50;background:#09090de9;backdrop-filter:blur(24px);border-color:#383840;padding:20px 5%;min-height:74px}
+.brand{font:900 27px/1 'Archivo Black',Arial,sans-serif;font-style:normal;letter-spacing:-2px}
+.brand span{color:var(--pink)}
+header nav{letter-spacing:1px}
+header nav a:hover{color:var(--pink)}
+.listen{border-radius:5px;background:var(--pink);color:#121317}
+.listen:hover{color:#121317;background:#eaff97}
+.hero{background:radial-gradient(ellipse at 80% 38%,#2e294f 0%,#181323 31%,#08080c 73%);border-bottom:1px solid #3b2d54}
+.hero:after{border-color:#ac92ff66;box-shadow:0 0 0 38px #a18dff1d,0 0 115px #9f59c37a}
+.hero h1,.titleline h2{font-family:'Archivo Black',sans-serif;font-weight:900;letter-spacing:-.075em}
+.hero h1 span{color:var(--pink)}
+.hero p{color:#c3c1d0}
+.eyebrow{color:var(--pink)}
+.stat strong{font-family:'Archivo Black';color:var(--pink)}
+.stat span{color:#b0adbd}
+.content{padding-top:96px}
+.titleline h2{font-size:clamp(39px,5.4vw,76px)}
+.titleline p{color:#b8b7c2}
+.controls{border-color:#30303d}
+.controls input,.controls select{background:#17171e;border-color:#484852;border-radius:6px}
+.filter button{background:#202029;border-color:#41414d;border-radius:5px}
+.filter button.active{background:var(--pink);color:#141419;border-color:var(--pink)}
+.count{color:var(--pink)}
+.song .cover{border-radius:8px;box-shadow:0 16px 36px #000a}
+.song .arrow{background:var(--pink);color:#0a0b0b}
+.song strong{color:#fafafa}
+.song small{color:#9d9daa}
+.more-button{border:0;background:var(--pink);color:#13151a;border-radius:5px}
+.more-button:hover{background:#e7ff9c;box-shadow:0 14px 30px #d8ff5440}
+.more-count{color:#aaa9b8}
+.notes{color:#9292a2}
+.notes a{color:var(--pink)}
+.foot{background:#09090d;border-top:1px solid #363642;color:#c5c5cf}
+.foot a:hover{color:var(--pink)}
+@media(max-width:620px){header{padding:16px 5%}.brand{font-size:22px}.hero{padding-top:65px}.hero h1{font-size:18vw}.stat strong{font-size:35px}}
+</style><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"></head><body><header><a class="brand" href="https://danceruuu.github.io/my-project/">GHUK<span>A</span>SI</a><nav><a href="https://danceruuu.github.io/my-project/">HOME</a><a href="https://danceruuu.github.io/my-project/artist/">BIOGRAPHY</a></nav><a href="https://open.spotify.com/artist/4vx3ca1O8XIwfsjQe1ZlTK" class="listen">LISTEN ON SPOTIFY ↗</a></header><main><section class="hero"><div class="eyebrow">GHUKASI / DENIS GHUKASYAN / ДЕНИС ГУКАСЯН</div><h1>THE<br>MUSIC<span>.</span></h1><p>Every GHUKASI release in one place. Discover the independent electronic artist's singles, atmospheric house productions, and the complete DREAMS album. Open any track on Apple Music.</p><div class="stats"><div class="stat"><strong>105</strong><span>TRACKS</span></div><div class="stat"><strong>94</strong><span>SINGLES</span></div><div class="stat"><strong>11</strong><span>DREAMS ALBUM TRACKS</span></div></div></section><section class="content"><div class="titleline"><h2>ALL RELEASES<span style="color:#fd3386">.</span></h2><p>Verified artist discography. Search by song title and filter singles or tracks from the DREAMS album.</p></div><div class="controls"><label class="sr" for="q">Search tracks</label><input id="q" type="search" placeholder="Search songs / Поиск песен"><div class="filter"><button type="button" class="active" data-kind="all" aria-pressed="true">All tracks</button><button type="button" data-kind="single" aria-pressed="false">Singles</button><button type="button" data-kind="album" aria-pressed="false">DREAMS album</button></div><label class="sr" for="year">Year</label><select id="year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option></select></div><p class="count" role="status" id="count">105 RELEASED TRACKS</p><div class="songs" id="all-tracks"><a class="song" data-title="call my name" data-year="2026" data-kind="single" href="https://music.apple.com/us/album/call-my-name/6835188343?i=6835188344&amp;uo=4" target="_blank" rel="noopener noreferrer"><span class="cover"><img loading="lazy" decoding="async" alt="Call My Name — GHUKASI" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/de/38/0cde3813-8eae-f1c3-27d8-44bf60e1bb39/artwork.jpg/600x600bb.jpg" width="250" height="250" /><span class="arrow">↗</span></span><strong>Call My Name</strong><small>Single · 2026</small></a>
 <a class="song" data-title="fell in love" data-year="2026" data-kind="single" href="https://music.apple.com/us/album/fell-in-love/6819028738?i=6819028739&amp;uo=4" target="_blank" rel="noopener noreferrer"><span class="cover"><img loading="lazy" decoding="async" alt="Fell in Love — GHUKASI" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/54/f1/0a/54f10a4c-8b03-c7f8-3559-f4258997f77d/artwork.jpg/600x600bb.jpg" width="250" height="250" /><span class="arrow">↗</span></span><strong>Fell in Love</strong><small>Single · 2026</small></a>
 <a class="song" data-title="את הקצב של הלב" data-year="2026" data-kind="single" href="https://music.apple.com/us/album/%D7%90%D7%AA-%D7%94%D7%A7%D7%A6%D7%91-%D7%A9%D7%9C-%D7%94%D7%9C%D7%91/6814170494?i=6814170496&amp;uo=4" target="_blank" rel="noopener noreferrer"><span class="cover"><img loading="lazy" decoding="async" alt="את הקצב של הלב — GHUKASI" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f9/ba/5c/f9ba5c57-df1e-b562-daee-8375c479bf89/artwork.jpg/600x600bb.jpg" width="250" height="250" /><span class="arrow">↗</span></span><strong>את הקצב של הלב</strong><small>Single · 2026</small></a>
 <a class="song" data-title="adrenaline" data-year="2026" data-kind="single" href="https://music.apple.com/us/album/adrenaline/6804242693?i=6804242694&amp;uo=4" target="_blank" rel="noopener noreferrer"><span class="cover"><img loading="lazy" decoding="async" alt="Adrenaline — GHUKASI" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f6/6e/67/f66e676c-bdc9-6254-f2fe-bffa74126f50/artwork.jpg/600x600bb.jpg" width="250" height="250" /><span class="arrow">↗</span></span><strong>Adrenaline</strong><small>Single · 2026</small></a>
