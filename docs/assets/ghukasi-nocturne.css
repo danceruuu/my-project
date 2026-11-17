@@ -344,3 +344,21 @@ html{scroll-behavior:auto}
 @media(max-width:1200px){.release-layout.release-equal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.release-layout.release-equal-grid>.release-tile{min-height:330px}}
 @media(max-width:650px){.release-layout.release-equal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.release-layout.release-equal-grid>.release-tile{min-height:225px}.release-layout.release-equal-grid .tile-body{padding:12px}.release-layout.release-equal-grid .tile-body strong{font-size:14px}}
 @media(max-width:380px){.release-layout.release-equal-grid>.release-tile{min-height:180px}}
+
+/* YouTube belongs up front: channel avatar, official banner and high-priority link */
+.header-youtube{display:inline-flex;align-items:center;gap:10px;border:1px solid #f34040;border-radius:5px;padding:12px 15px;color:#fff!important;font-size:11px;font-weight:800;letter-spacing:.7px;background:#e92829;white-space:nowrap;transition:transform .2s,background .2s}
+.header-youtube:hover{background:#bc171b;transform:translateY(-2px)}
+.header-youtube>span:first-child{display:grid;place-items:center;font-size:12px}
+.hero-youtube{border-color:#e02b35!important;background:#d8242a!important;color:white!important}
+.hero-youtube:hover{background:#9d1723!important}
+.youtube-channel-card{position:relative}
+.youtube-channel-banner{display:block;position:absolute;left:0;top:0;width:100%;height:220px;object-fit:cover;object-position:center;opacity:.60;pointer-events:none;mask-image:linear-gradient(to bottom,#000 0%,#0008 65%,transparent 100%);z-index:0}
+.youtube-channel-card .watch-copy{position:relative;z-index:2}
+.youtube-channel-card .visual{position:relative;isolation:isolate}
+.youtube-channel-avatar{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(70%,225px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;border:5px solid #d8ff54;box-shadow:0 20px 65px #0009}
+.youtube-channel-card .watch-play{position:relative;z-index:3;width:70px;height:70px;background:#ef3238;color:white;box-shadow:0 0 0 11px #e5232850;font-size:23px;transform:translate(90px,70px)}
+.youtube-channel-card:hover .watch-play{transform:translate(90px,70px) scale(1.1)}
+.youtube-channel-card .visual:after{opacity:.12}
+@media(max-width:920px){.header-youtube-label{display:none}.header-youtube{padding:12px 13px;font-size:15px}.header-youtube>span:first-child{font-size:17px}}
+@media(max-width:730px){.header-youtube{padding:11px 9px;min-height:41px}.hero-youtube{flex:0 0 auto}.youtube-channel-banner{height:175px}.youtube-channel-card .watch-play{transform:translate(78px,52px)}.youtube-channel-card:hover .watch-play{transform:translate(78px,52px) scale(1.07)}}
+@media(max-width:430px){.header-right{gap:5px!important}.header-youtube{padding:10px 8px}.header-cta{display:none!important}.hero-buttons{gap:9px}.hero-buttons>.btn{font-size:10px;padding:11px 13px;min-height:45px}}
