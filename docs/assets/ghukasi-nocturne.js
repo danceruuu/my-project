@@ -18,6 +18,7 @@ function draw(){
  const left=matches.length-visible;
  more.hidden=left<=0;
  if(left>0)more.innerHTML='SHOW '+Math.min(batch,left)+' MORE <span aria-hidden="true">↓</span>';
+ window.GHUKASI_I18N?.updateDynamic?.();
 }
 function filter(){
  const q=input.value.trim().toLocaleLowerCase(),y=year.value;
