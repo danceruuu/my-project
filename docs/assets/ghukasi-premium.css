@@ -256,3 +256,13 @@ html{scroll-behavior:auto}
 *,*:before,*:after{animation:none!important;transition:none!important}
 .js-motion .reveal{opacity:1!important;transform:none!important}
 }
+
+/* Discography: progressive reveal in 12-track batches */
+#catalog .catalog-more-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;padding:37px 0 4px}
+#catalog .catalog-more{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:15px 32px;background:#131319;color:#fff;border:1px solid #131319;border-radius:999px;font:800 13px "DM Sans",sans-serif;letter-spacing:.55px;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+#catalog .catalog-more span{font-size:20px;font-weight:400;line-height:1}
+#catalog .catalog-more:hover{background:#393945;box-shadow:0 9px 25px #00000022;transform:translateY(-2px)}
+#catalog .catalog-more:focus-visible{outline:3px solid #399ef5;outline-offset:4px}
+#catalog .catalog-more[hidden],#catalog .track[hidden]{display:none!important}
+#catalog .catalog-showing{font-size:12px;color:#777783;margin:0}
+@media(max-width:690px){#catalog .catalog-more-wrap{padding:28px 0 0}#catalog .catalog-more{width:100%;max-width:320px;min-height:52px;font-size:12px}}
