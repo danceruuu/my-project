@@ -107,7 +107,7 @@ function selectLanguage(code,save=true){
  const current=AVAILABLE.find(x=>x[0]===code);
  const picker=document.querySelector('.lang-control');
  if(picker){picker.querySelector('.lang-current .flag').textContent=current[1];picker.querySelector('.lang-current .short').textContent=current[2];picker.querySelectorAll('.lang-options button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.lang===code)));}
- for(const x of document.querySelectorAll('.release-tile .tile-body small'))if(code!=='en')x.textContent=''+(value('single')??'Single')+' · 2026';else x.textContent='Single · 2026';
+ for(const x of document.querySelectorAll('.release-tile .tile-body small'))x.textContent='2026';
  updateDynamic();
 }
 function start(){
